@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -95,7 +96,8 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton("开源repo",(iface,which)->{
             iface.dismiss();
             ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-            clipboardManager.setText("");
+            clipboardManager.setText("https://github.com/YHaoNan/FutureFlash.git");
+            Toast.makeText(this, "Repo地址已复制", Toast.LENGTH_SHORT).show();
         });
         builder.show();
     }
